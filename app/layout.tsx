@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import Script from "next/script";
 
 
 import { Geist, Geist_Mono } from "next/font/google";
@@ -121,7 +122,17 @@ export default function RootLayout({
         {children}
         <Analytics />
         <SpeedInsights />
-      </body>
+      {process.env.NEXT_PUBLIC_CLOUDFLARE_WEB_ANALYTICS_TOKEN ? (
+          <Script
+            defer
+            src="https://static.cloudflareinsights.com/beacon.min.js"
+            data-cf-beacon={JSON.stringify({
+              token: process.env.NEXT_PUBLIC_CLOUDFLARE_WEB_ANALYTICS_TOKEN,
+            })}
+            strategy="afterInteractive"
+          />
+        ) : null}
+</body>
     </html>
   );
 }
