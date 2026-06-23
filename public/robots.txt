@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin/
 Disallow: /api/
 
-Sitemap: /sitemap.xml 
+Sitemap: https://free-image-edit.vercel.app/sitemap.xml

@@ -1,0 +1,9 @@
+# Free Image Edit
+
+Free Image Edit is a public browser-based image editing utility. It helps visitors resize, convert, compress, optimize, and set image resolution for web and print workflows.
+
+## Public Pages
+- Home: https://free-image-edit.vercel.app/
+
+Search engines and AI crawlers may crawl the public tool page. Admin and API routes are excluded by robots.txt.
+
